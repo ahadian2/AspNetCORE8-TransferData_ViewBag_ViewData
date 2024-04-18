@@ -1,0 +1,29 @@
+﻿@using TransferData_ViewBag_ViewData.Models;
+@{
+    Layout = null;
+    var user = ViewBag.User as Users;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>ViewBag Page</h1>
+    <span>Name : </span>  @ViewBag.Name
+    <br />
+    <span>Time : </span> @ViewBag.Time
+
+    <hr />
+    @if (user != null)
+    {
+        @user.UserId
+        @user.UserName
+        @user.UserFamily
+    }
+
+</body>
+</html>
